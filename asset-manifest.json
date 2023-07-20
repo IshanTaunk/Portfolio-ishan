@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Portfolio-ishan/static/css/main.d15e918b.css",
+    "main.css": "/Portfolio-ishan/static/css/main.8579748f.css",
     "main.js": "/Portfolio-ishan/static/js/main.5c65c0b8.js",
     "static/js/787.30237536.chunk.js": "/Portfolio-ishan/static/js/787.30237536.chunk.js",
     "static/media/profile.jpg": "/Portfolio-ishan/static/media/profile.6e868d8574a7d7492e4b.jpg",
@@ -9,12 +9,12 @@
     "static/media/sun.png": "/Portfolio-ishan/static/media/sun.e084c7323a6f30ebee93.png",
     "static/media/half-moon.png": "/Portfolio-ishan/static/media/half-moon.b94ca9fb65cef040a31d.png",
     "index.html": "/Portfolio-ishan/index.html",
-    "main.d15e918b.css.map": "/Portfolio-ishan/static/css/main.d15e918b.css.map",
+    "main.8579748f.css.map": "/Portfolio-ishan/static/css/main.8579748f.css.map",
     "main.5c65c0b8.js.map": "/Portfolio-ishan/static/js/main.5c65c0b8.js.map",
     "787.30237536.chunk.js.map": "/Portfolio-ishan/static/js/787.30237536.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d15e918b.css",
+    "static/css/main.8579748f.css",
     "static/js/main.5c65c0b8.js"
   ]
 }
