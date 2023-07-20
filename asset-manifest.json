@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/Portfolio-ishan/static/css/main.c003e8d0.css",
-    "main.js": "/Portfolio-ishan/static/js/main.0f1d1338.js",
+    "main.css": "/Portfolio-ishan/static/css/main.a81fa2b9.css",
+    "main.js": "/Portfolio-ishan/static/js/main.5c65c0b8.js",
     "static/js/787.30237536.chunk.js": "/Portfolio-ishan/static/js/787.30237536.chunk.js",
     "static/media/profile.jpg": "/Portfolio-ishan/static/media/profile.6e868d8574a7d7492e4b.jpg",
     "static/media/inst.png": "/Portfolio-ishan/static/media/inst.4e16d5df53f670b9ba91.png",
     "static/media/contact.jpg": "/Portfolio-ishan/static/media/contact.5acc879774965231bf40.jpg",
+    "static/media/sun.png": "/Portfolio-ishan/static/media/sun.e084c7323a6f30ebee93.png",
+    "static/media/half-moon.png": "/Portfolio-ishan/static/media/half-moon.b94ca9fb65cef040a31d.png",
     "index.html": "/Portfolio-ishan/index.html",
-    "main.c003e8d0.css.map": "/Portfolio-ishan/static/css/main.c003e8d0.css.map",
-    "main.0f1d1338.js.map": "/Portfolio-ishan/static/js/main.0f1d1338.js.map",
+    "main.a81fa2b9.css.map": "/Portfolio-ishan/static/css/main.a81fa2b9.css.map",
+    "main.5c65c0b8.js.map": "/Portfolio-ishan/static/js/main.5c65c0b8.js.map",
     "787.30237536.chunk.js.map": "/Portfolio-ishan/static/js/787.30237536.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c003e8d0.css",
-    "static/js/main.0f1d1338.js"
+    "static/css/main.a81fa2b9.css",
+    "static/js/main.5c65c0b8.js"
   ]
 }
