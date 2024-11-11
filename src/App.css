@@ -1,16 +1,31 @@
+.App{
+    background-color: antiquewhite;
+}
+
+.App-night-mode{
+    background-color: #137575;
+    color: white;
+}
+.row{
+    width: 100%;
+    display: flex;
+}
+
+.row-reverse{
+    flex-direction: row-reverse;
+}
 .about-me{
     display: flex;
     background-color: antiquewhite;
 }
 
-.about-me-text{
+.text-sec{
     padding: 10vh;
     height: 50vh;
-    width: 60%;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
 
 .about-me-text-header{
@@ -18,16 +33,17 @@
     font-weight: 800;
 }
 
-.atlas-image{
+.image-sec{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    min-width: 40vw;
 }
 
-.atlas-image-pic{
-    mix-blend-mode: multiply;
-    transform: scale(1.5);
+.profile-pic-image{
+    width: 250px;
+    border: 15px solid white;
+    border-radius: 10px;
 }
 
 .work-experience{
@@ -44,12 +60,30 @@
 }
 
 .inst-image{
-    transform: scale(0.3);
+    width: 250px;
     mix-blend-mode: multiply;
 }
 
 .contact-image-pic{
-    transform: scale(0.4);
+    width: 400px;
     mix-blend-mode: multiply;
 }
 
+.skills-list{
+    display: inline-flex;
+}
+
+@media (max-width:1000px){
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-sec{
+        width: 100%;
+    }
+
+    .text-sec{
+        width: fit-content;
+    }
+}
