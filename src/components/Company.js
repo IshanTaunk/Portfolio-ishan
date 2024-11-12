@@ -11,7 +11,7 @@ const Company = (props)=>{
                     <span>{props.company.workDesc}</span>
                     <div className='project-header-text'><strong>Projects:</strong></div>
                     {props.company.projects.map(project=>{
-                        return<>
+                        return<div key={project.projectName}>
                         <Accordion sx={{backgroundColor:'rgb(256,256,256,0.2)'}}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
@@ -26,7 +26,7 @@ const Company = (props)=>{
                                 {project.projectDescrip}
                             </Typography>
                         </AccordionDetails>
-                        </Accordion></>
+                        </Accordion></div>
                     })}
     </>
 }

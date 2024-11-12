@@ -9,6 +9,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import ModeNightIcon from '@mui/icons-material/ModeNight';
 import Company from './components/Company';
+import Resume from "./assets/Ishan_Taunk_Resume.pdf";
 
 const allCompanyInfo = [
     {
@@ -35,10 +36,12 @@ const allCompanyInfo = [
 
 function App() {
     const [nightMode, setNightMode] = useState(false);
+    
     const handleAlignment = (event, value) => {
         console.log(event, "eve", value);
         setNightMode(value);
     }
+
     return (
         <div className={`App${nightMode ? '-night-mode' : ''}`}>
             <div className='header'>
@@ -55,6 +58,9 @@ function App() {
                 <div className="about-me-text text-sec">
                     <div className="about-me-text-header">Hi, I am Ishan Taunk</div>
                     <div>As a Frontend Web Developer I specialise in creating functional and beautiful websites and web applications that are optimised for user experience. My expertise lies in HTML, CSS, JavaScript, Angular and React.</div>
+                    <div className='btn-section'>
+                        <a href={Resume} download="Ishan_Taunk_Resume.pdf" className='btn-text'><button className='btn'>Download Resume</button></a>
+                    </div>
                 </div>
             </div>
             <div className="row">
@@ -64,7 +70,7 @@ function App() {
                 <div className="work-experience-timeline text-sec">
                     <div className="about-me-text-header">Work</div>
                     {allCompanyInfo.map(companyInfo=>{
-                        return <Company company={companyInfo} />
+                        return <Company company={companyInfo} key={companyInfo.companyName}/>
                     })}
                 </div>
             </div>
