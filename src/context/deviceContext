@@ -1,0 +1,7 @@
+import { createContext } from "react";
+
+const deviceContext = createContext({
+    isMobileView : window.screen.width < 500
+});
+
+export default deviceContext;

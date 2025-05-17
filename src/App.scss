@@ -1,0 +1,66 @@
+.App{
+    background-color: antiquewhite;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+}
+
+.image-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40vw;
+}
+
+.work-experience{
+    background-color: antiquewhite;
+    display: flex;
+    height: 50vh;
+    align-items: center;
+}
+
+.work-experience-image{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.inst-image{
+    width: 250px;
+    mix-blend-mode: multiply;
+}
+
+.contact-image-pic{
+    width: 400px;
+    mix-blend-mode: multiply;
+}
+
+@media (max-width:1000px){
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-sec{
+        width: 100%;
+    }
+}
+
+@media (min-width:1000px){
+    .text-sec{
+        padding: 10vh;
+        height: 50vh;
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.mobile-App{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+}
