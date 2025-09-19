@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Portfolio-ishan/static/css/main.b3790545.css",
-    "main.js": "/Portfolio-ishan/static/js/main.2118c946.js",
+    "main.css": "/Portfolio-ishan/static/css/main.fbc73c01.css",
+    "main.js": "/Portfolio-ishan/static/js/main.1f78b8ba.js",
     "static/js/787.30237536.chunk.js": "/Portfolio-ishan/static/js/787.30237536.chunk.js",
-    "static/media/profile.jpg": "/Portfolio-ishan/static/media/profile.6e868d8574a7d7492e4b.jpg",
-    "static/media/Ishan_Taunk_Resume.pdf": "/Portfolio-ishan/static/media/Ishan_Taunk_Resume.e2b4fb2597c8d8425b49.pdf",
+    "static/media/Ishan_Taunk_Resume.pdf": "/Portfolio-ishan/static/media/Ishan_Taunk_Resume.d515b8df2c95c44c2b84.pdf",
+    "static/media/profile.jpg": "/Portfolio-ishan/static/media/profile.76471911ab8dc50f0fd7.jpg",
     "index.html": "/Portfolio-ishan/index.html",
-    "main.b3790545.css.map": "/Portfolio-ishan/static/css/main.b3790545.css.map",
-    "main.2118c946.js.map": "/Portfolio-ishan/static/js/main.2118c946.js.map",
+    "main.fbc73c01.css.map": "/Portfolio-ishan/static/css/main.fbc73c01.css.map",
+    "main.1f78b8ba.js.map": "/Portfolio-ishan/static/js/main.1f78b8ba.js.map",
     "787.30237536.chunk.js.map": "/Portfolio-ishan/static/js/787.30237536.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3790545.css",
-    "static/js/main.2118c946.js"
+    "static/css/main.fbc73c01.css",
+    "static/js/main.1f78b8ba.js"
   ]
 }
