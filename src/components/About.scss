@@ -1,11 +1,17 @@
 .about-me-text-header{
-    font-size: 2.5rem;
+    font-size: 6rem;
     font-weight: 800;
+    margin: 0;
 }
 
 .about-me{
     display: flex;
     background-color: antiquewhite;
+}
+
+.about-me-text{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .btn{
@@ -22,16 +28,18 @@
 
 .btn-section{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-top: 2rem;
-}
-
-.text-sec{
-    padding: 5vh;
 }
 
 @media (max-width:1000px){
     .text-sec{
         padding: 5vh;
+    }
+    .about-me-text-header{
+        font-size: 2.25rem;
+    }
+    .btn-section{
+        justify-content: center;
     }
 }

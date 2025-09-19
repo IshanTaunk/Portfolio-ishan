@@ -1,12 +1,13 @@
-.image-sec{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 40vw;
-}
-
 .profile-pic-image{
     width: 250px;
+    height: 280px;
     border: 15px solid white;
     border-radius: 10px;
+}
+
+@media (max-width:1000px){
+    .profile-pic{
+        display: flex;
+        justify-content: center;
+    }
 }

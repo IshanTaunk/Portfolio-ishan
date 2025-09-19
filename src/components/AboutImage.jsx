@@ -3,7 +3,7 @@ import './AboutImage.scss';
 
 const AboutImage = () => {
     return (
-        <div className="profile-pic image-sec">
+        <div className="profile-pic">
             <img src={profile} className="profile-pic-image" alt="atlas.jpg"></img>
         </div>
     )

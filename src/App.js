@@ -1,6 +1,4 @@
 import './App.scss';
-import inst from "./assets/inst.png";
-import { useState } from 'react';
 // import ToggleButton from '@mui/material/ToggleButton';
 // import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 // import WbSunnyIcon from '@mui/icons-material/WbSunny';
@@ -9,7 +7,6 @@ import Company from './components/Company';
 import About from './components/About';
 import AboutImage from './components/AboutImage';
 import Skills from './components/Skills';
-import SkillsImage from './components/SkillsImage';
 import Contacts from './components/Contacts';
 import ContactsImage from './components/ContactsImage';
 
@@ -18,59 +15,60 @@ import ContactsImage from './components/ContactsImage';
 // Add scroll to inside header tabs to scroll to that section
 // Add work experience modals for each company
 
-const allCompanyInfo = [
+const allCompanyInfo = [{
+    companyName: 'Frontend Engineer @ Holiday Inn Club Vacations',
+    period: '2025-Present',
+    workDesc : 'To lead the UI development work for booking website.',
+    projects: [{
+        projectDescrip: 'Led front-end modernization with React and NextJS improving performance, maintainability, and user experience for high traffic, customer-facing application.'
+    },{
+        projectDescrip: 'Utilized React, Typescript and SCSS to improve the calendar feature by implementing new workflow to help the customer navigate smoothly through the resort booking flow.'
+    },{
+        projectDescrip: 'Fostered cross-functional collaboration accross UX, QA and engineering teams, boosting project delivery success rate by 40% and employee engagement by 50%.'
+    },{
+        projectDescrip: 'Added new content types with properties in Content Stack Management system and integrated the corresponding data in UI along with test cases in JEST.'
+    }]
+    },
     {
-    companyName: "Aidetic (2020-2022)",
-    workDesc : "To develop responsive web applications using HTML5, CSS3, Javascript, React and Angular framework.",
-    projects : [{
-        projectName: "73Strings",
-        projectDescrip: "To design and maintain the AI related pages of the website using Angular framework. Created a feature which helpsthe client in uploading their documents and visualize the conatined information in an organized manner."
-    }] 
-},{
-    companyName: "Quantum (2022-Present)",
+    companyName: "Frontend Engineer @ Quantum",
+    period: '2022-2024',
     workDesc : "Working as a frontend developer",
     projects : [{
-        projectName: "Sizer tool",
         projectDescrip: "To improve the tool in order to better the user in selecting the type of NVR according to their needs."
     },{
-        projectName: "Template Upload",
         projectDescrip: "To help the user deploy the software with just an upload of document and configuring the required information."
     },{
-        projectName: "USP5.0",
         projectDescrip: "To manage the USP 5.0 UI and improve it by adding new features in angular framework."
+    }] 
+},{
+    companyName: "Frontend Engineer @ Aidetic",
+    period: '2020-2022',
+    workDesc : "To develop responsive web applications using HTML5, CSS3, Javascript, React and Angular framework.",
+    projects : [{
+        projectDescrip: "To design and maintain the AI related pages of the website using Angular framework. Created a feature which helps the client in uploading their documents and visualize the contained information in an organized manner."
     }] 
 }];
 
 function App() {
-    const [nightMode, setNightMode] = useState(false);
-    const isMobileView = window.screen.width < 500;
+    const isMobileView = window.innerWidth < 500;
     console.log(isMobileView,'width');
-    
-    const handleAlignment = (event, value) => {
-        console.log(event, "eve", value);
-        setNightMode(value);
-    }
 
     return (
         !isMobileView?
-        (<div className={`App${nightMode ? '-night-mode' : ''}`}>
-            {/* <div className='header'>
-                <ToggleButtonGroup exclusive value={nightMode} size="small" onChange={handleAlignment}>
-                    <ToggleButton value={false} ><WbSunnyIcon></WbSunnyIcon></ToggleButton>
-                    <ToggleButton value={true}><ModeNightIcon></ModeNightIcon></ToggleButton>
-                </ToggleButtonGroup>
-            </div> */}
-            <div>
+        (<div className='App'>
             <div className="row">
-                <About/>
-                <AboutImage />
+                <div className='intro-left-col'>
+                    <About/>
+                </div>
+                <div className='intro-right-col'>
+                    <AboutImage />
+                </div>
             </div>
             <div className="row">
-                <div className="we-image image-sec">
-                    <img className="inst-image" src={inst} alt="inst.png" loading='lazy'></img>
+                <div className="left-col">
+                    <h1>Work Experience</h1>
                 </div>
-                <div className="work-experience-timeline text-sec">
-                    <div className="about-me-text-header">Work</div>
+                <div className="right-col">
                     {allCompanyInfo.map(companyInfo=>{
                         return <Company company={companyInfo} key={companyInfo.companyName}/>
                     })}
@@ -78,27 +76,46 @@ function App() {
             </div>
             {/* Skills */}
             <div className="row">
-                <Skills/>
-                <SkillsImage />
+                <div className="left-col">
+                    <h1>Skills</h1>
+                </div>
+                <div className="right-col">
+                    <Skills/>
+                </div>
             </div>
             {/* Contact */}
             <div className="row">
-                <ContactsImage/>
-                <Contacts />
-            </div>
+                <div className="left-col">
+                    <ContactsImage/>
+                </div>
+                <div className="right-col">
+                    <Contacts />
+                </div>
             </div>
         </div>)
         :
-        (<div className='mobile-App App'> {/* Mobile View */}
-            <div>
+        (<div className='App'> {/* Mobile View */}
+            <div className='intro-sm-row'>
                 <AboutImage />
+            </div>
+            <div className='sm-row'>
                 <About/>
             </div>
-            <div>
-                <SkillsImage />
+            <div className='sm-row'>
+                <div>
+                    <h1>Work Experience</h1>
+                </div>             
+                {allCompanyInfo.map(companyInfo=>{
+                        return <Company company={companyInfo} key={companyInfo.companyName}/>
+                    })}
+            </div>
+            <div className='sm-row'>
+                <div>
+                    <h1>Skills</h1>
+                </div>             
                 <Skills/>
             </div>
-            <div>
+            <div className='sm-row'>
                 <ContactsImage/>
                 <Contacts />
             </div>
