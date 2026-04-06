@@ -1,4 +1,3 @@
-import './App.scss';
 // import ToggleButton from '@mui/material/ToggleButton';
 // import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 // import WbSunnyIcon from '@mui/icons-material/WbSunny';
@@ -9,118 +8,81 @@ import AboutImage from './components/AboutImage';
 import Skills from './components/Skills';
 import Contacts from './components/Contacts';
 import ContactsImage from './components/ContactsImage';
+import { allCompanyInfo } from './constants';
 
 //TO-DO
 // Add Header bar and make it sticky
 // Add scroll to inside header tabs to scroll to that section
 // Add work experience modals for each company
 
-const allCompanyInfo = [{
-    companyName: 'Frontend Engineer @ Holiday Inn Club Vacations',
-    period: '2025-Present',
-    workDesc : 'To lead the UI development work for booking website.',
-    projects: [{
-        projectDescrip: 'Led front-end modernization with React and NextJS improving performance, maintainability, and user experience for high traffic, customer-facing application.'
-    },{
-        projectDescrip: 'Utilized React, Typescript and SCSS to improve the calendar feature by implementing new workflow to help the customer navigate smoothly through the resort booking flow.'
-    },{
-        projectDescrip: 'Fostered cross-functional collaboration accross UX, QA and engineering teams, boosting project delivery success rate by 40% and employee engagement by 50%.'
-    },{
-        projectDescrip: 'Added new content types with properties in Content Stack Management system and integrated the corresponding data in UI along with test cases in JEST.'
-    }]
-    },
-    {
-    companyName: "Frontend Engineer @ Quantum",
-    period: '2022-2024',
-    workDesc : "Working as a frontend developer",
-    projects : [{
-        projectDescrip: "To improve the tool in order to better the user in selecting the type of NVR according to their needs."
-    },{
-        projectDescrip: "To help the user deploy the software with just an upload of document and configuring the required information."
-    },{
-        projectDescrip: "To manage the USP 5.0 UI and improve it by adding new features in angular framework."
-    }] 
-},{
-    companyName: "Frontend Engineer @ Aidetic",
-    period: '2020-2022',
-    workDesc : "To develop responsive web applications using HTML5, CSS3, Javascript, React and Angular framework.",
-    projects : [{
-        projectDescrip: "To design and maintain the AI related pages of the website using Angular framework. Created a feature which helps the client in uploading their documents and visualize the contained information in an organized manner."
-    }] 
-}];
+function Section({ title, children, leftContent }) {
+  return (
+    <section className="grid grid-cols-1 gap-6 border-b border-white/10 py-10 md:gap-8 lg:grid-cols-[240px_minmax(0,1fr)] lg:py-14">
+      <div className="lg:sticky lg:top-24 lg:self-start">
+        {leftContent || (
+          <h2 className="m-0 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+            {title}
+          </h2>
+        )}
+      </div>
+      <div className="min-w-0">{children}</div>
+    </section>
+  );
+}
 
 function App() {
-    const isMobileView = window.innerWidth < 500;
-    console.log(isMobileView,'width');
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <main className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-16">
+        {/* Hero / Intro */}
+        <section className="grid grid-cols-1 items-center gap-8 border-b border-white/10 pb-10 md:gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:pb-16">
+          <div className="order-2 lg:order-1">
+            <About />
+          </div>
 
-    return (
-        !isMobileView?
-        (<div className='App'>
-            <div className="row">
-                <div className='intro-left-col'>
-                    <About/>
-                </div>
-                <div className='intro-right-col'>
-                    <AboutImage />
-                </div>
+          <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
+            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md">
+              <AboutImage />
             </div>
-            <div className="row">
-                <div className="left-col">
-                    <h1>Work Experience</h1>
-                </div>
-                <div className="right-col">
-                    {allCompanyInfo.map(companyInfo=>{
-                        return <Company company={companyInfo} key={companyInfo.companyName}/>
-                    })}
-                </div>
+          </div>
+        </section>
+
+        {/* Work Experience */}
+        <Section title="Work Experience">
+          <div className="space-y-6 sm:space-y-8">
+            {allCompanyInfo.map((companyInfo) => (
+              <div key={companyInfo.companyName} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm sm:p-6">
+                <Company company={companyInfo} />
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        {/* Skills */}
+        <Section title="Skills">
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm sm:p-6">
+            <Skills />
+          </div>
+        </Section>
+
+        {/* Contact */}
+        <Section
+          title="Contact"
+          leftContent={
+            <div className="flex justify-center lg:justify-start">
+              <div className="w-full max-w-[220px] sm:max-w-[260px]">
+                <ContactsImage />
+              </div>
             </div>
-            {/* Skills */}
-            <div className="row">
-                <div className="left-col">
-                    <h1>Skills</h1>
-                </div>
-                <div className="right-col">
-                    <Skills/>
-                </div>
-            </div>
-            {/* Contact */}
-            <div className="row">
-                <div className="left-col">
-                    <ContactsImage/>
-                </div>
-                <div className="right-col">
-                    <Contacts />
-                </div>
-            </div>
-        </div>)
-        :
-        (<div className='App'> {/* Mobile View */}
-            <div className='intro-sm-row'>
-                <AboutImage />
-            </div>
-            <div className='sm-row'>
-                <About/>
-            </div>
-            <div className='sm-row'>
-                <div>
-                    <h1>Work Experience</h1>
-                </div>             
-                {allCompanyInfo.map(companyInfo=>{
-                        return <Company company={companyInfo} key={companyInfo.companyName}/>
-                    })}
-            </div>
-            <div className='sm-row'>
-                <div>
-                    <h1>Skills</h1>
-                </div>             
-                <Skills/>
-            </div>
-            <div className='sm-row'>
-                <ContactsImage/>
-                <Contacts />
-            </div>
-        </div>) 
-    );
+          }
+        >
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm sm:p-6">
+            <Contacts />
+          </div>
+        </Section>
+      </main>
+    </div>
+  );
 }
 
 export default App;
