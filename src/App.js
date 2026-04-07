@@ -7,7 +7,6 @@ import About from './components/About';
 import AboutImage from './components/AboutImage';
 import Skills from './components/Skills';
 import Contacts from './components/Contacts';
-import ContactsImage from './components/ContactsImage';
 import { allCompanyInfo } from './constants';
 
 //TO-DO
@@ -15,15 +14,14 @@ import { allCompanyInfo } from './constants';
 // Add scroll to inside header tabs to scroll to that section
 // Add work experience modals for each company
 
-function Section({ title, children, leftContent }) {
+function Section({ title, children, leftExtra }) {
   return (
     <section className="grid grid-cols-1 gap-6 border-b border-white/10 py-10 md:gap-8 lg:grid-cols-[240px_minmax(0,1fr)] lg:py-14">
       <div className="lg:sticky lg:top-24 lg:self-start">
-        {leftContent || (
-          <h2 className="m-0 text-xl font-semibold tracking-tight text-white sm:text-2xl">
-            {title}
-          </h2>
-        )}
+        <h2 className="m-0 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+          {title}
+        </h2>
+        {leftExtra ? <div className="mt-6">{leftExtra}</div> : null}
       </div>
       <div className="min-w-0">{children}</div>
     </section>
@@ -68,13 +66,6 @@ function App() {
         {/* Contact */}
         <Section
           title="Contact"
-          leftContent={
-            <div className="flex justify-center lg:justify-start">
-              <div className="w-full max-w-[220px] sm:max-w-[260px]">
-                <ContactsImage />
-              </div>
-            </div>
-          }
         >
           <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm sm:p-6">
             <Contacts />
