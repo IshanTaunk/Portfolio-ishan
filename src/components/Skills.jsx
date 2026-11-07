@@ -1,11 +1,13 @@
 const skillGroups = [
   {
-    title: 'Frontend',
+    title: 'Frontend & Backend',
     description:
-      '5+ years of experience building fast, scalable, and responsive front-end applications.',
+      '6+ years of experience building fast, scalable, and responsive front-end applications.',
     items: [
       'React',
       'Next.js',
+      'Node.js',
+      'MongoDB',
       'Angular',
       'Redux',
       'HTML5',

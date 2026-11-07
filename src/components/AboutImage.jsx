@@ -7,7 +7,7 @@ const AboutImage = () => {
         <img
           src={profile}
           alt="Ishan Taunk profile"
-          className="w-full rounded-xl border-[10px] border-white shadow-xl sm:border-[12px] md:border-[14px]"
+          className="w-full shadow-xl animate-slideUp  duration-2000 transition ease-in-out delay-350 grayscale hover:grayscale-0"
         />
       </div>
     </div>

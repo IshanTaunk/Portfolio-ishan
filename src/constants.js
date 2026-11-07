@@ -1,9 +1,12 @@
 export const allCompanyInfo = [
   {
-    companyName: 'Senior Frontend Engineer @ Holiday Inn Club Vacations',
+    companyName: 'Senior Engineer @ Holiday Inn Club Vacations',
     period: '2025-Present',
     workDesc: 'Building and improving a high-traffic, customer-facing booking platform with a focus on performance, reliability, and conversion.',
     projects: [
+      {
+        projectDescrip: `Led the integration of TanStack Query across the application for API management and server-side rendering, improving state management while implementing robust caching and retry mechanisms to enhance performance and reliability.`
+      },
       {
         projectDescrip: 'Led frontend modernization with React and Next.js, improving performance, maintainability, and UX for a high-traffic booking platform.'
       },
